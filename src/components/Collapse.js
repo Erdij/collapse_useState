@@ -1,3 +1,8 @@
+// ilk constructor --> state initialization
+// render methodu ilk defa çalıştı.
+// onClick event ı çalıştı
+// setState ,state nesnesini güncelledi -->  triggered render **render methodunu yeniden çalıştırmış oldu.
+// render metodu güncel JSX i sayfada gösteriyor.
 import React from "react";
 
 class Collapse extends React.Component {
@@ -21,6 +26,7 @@ class Collapse extends React.Component {
 
   showMore = () => {
     console.log(this);
+    this.setState({ showContent: !this.state.showContent });
   };
   render() {
     // console.log(this);
